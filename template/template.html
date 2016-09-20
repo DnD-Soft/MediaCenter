@@ -1,0 +1,49 @@
+<html>
+	<head>
+		<title>Medija Centar</title>
+		<link rel="stylesheet" type="text/html" href="../css/index.css" />
+	</head>
+	<body>
+		<div class="player-div">
+			<div class="player">
+				<div class="playerLeft">
+					<div class="playerInfo">
+						<p>Album pjesme, neupadljiv je</p>
+						<p>Naslov pjesme je ovo</p>
+						<p>
+							<span>/ovo/je/put/do/fajla.mp3</span>
+							<span>755</span>
+							<span>4.5MB</span>
+						</p>
+					</div>
+					<div class="playerCtrl">
+						<div class="playerCtrl-div">
+							<div class="playerCtrlPrev"></div>
+							<div class="playerCtrlPP"></div>
+							<div class="playerCtrlNxt"></div>
+							<div class="playerCtrlBar">
+								<div class="playerCtrlBarProg"></div>
+								<div class="playerCtrlBarInfo"></div>
+							</div>
+							<div class="playerCtrlTime">23:45 / 44:12</div>
+							<div class="clear"></div>
+						</div>
+					</div>
+				</div>
+				<div class="playerRight">
+					<div class="playerImg" style="background-image:url('album.png');"></div>
+				</div>
+				<div class="clear"></div>
+			</div>
+		</div>
+		<div class="content">
+			<ul>
+				[% FOREACH file IN content %]
+					<li>
+						<a href="#">[% file %]</a>
+					</li>
+				[% END %]
+			</ul>
+		</div>			
+	</body>
+</html>
