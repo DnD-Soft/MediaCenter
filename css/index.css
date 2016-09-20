@@ -1,0 +1,31 @@
+html{margin:0; padding:0; box-sizing: border-box;}
+*, *:before, *:after{box-sizing:inherit;}
+
+body{margin:0; padding:0;}
+h1{}
+h2{}
+h3{}
+
+.clear{width:100%; height:0px; clear:both;}
+
+.player-div{width:100%; height:260px; background-color:#331100;}
+.player{width:100%; height:100%; color:white; font-size:xx-large;}
+	.playerLeft{width:calc(100% - 260px); height:100%; float:left;}
+		.playerInfo{width:100%; padding:2%;}
+			.playerInfo p{margin:5px 0;}
+			.playerInfo p:nth-of-type(1){font-size:inherit; color:#ccc;}
+			.playerInfo p:nth-of-type(2){font-size:larger;}
+			.playerInfo p:nth-of-type(3){font-size:smaller; color:#ccc;}
+		.playerCtrl{width:100%; height:80px; font-size:smaller; position:relative; bottom:0; left:0;}
+		.playerCtrl-div{width:100%; height:100%; display:table;}
+			.playerCtrl-div > div{height:100%; float:left;}
+			.playerCtrlPrev{width:80px; border-left-width:0px;}
+			.playerCtrlPP{width:80px;}
+			.playerCtrlNxt{width:80px;}
+			.playerCtrlBar{width:calc(calc(100% - 240px) * 0.7);}
+			.playerCtrlBerProg{}
+			.playerCtrlBarInfo{}
+			.playerCtrlTime{width:calc(calc(100% - 240px) * 0.3); line-height:100%;  vertical-align:middle; text-ali    gn:c    enter; font-size:smaller;}
+	.playerRight{width:260px; height:100%;  background-color:#1a0900; float:right;}
+		.playerImg{width:100%; height:260px;}
+
