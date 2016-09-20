@@ -9,7 +9,7 @@ print("Content-type: text/html\n\n");
 my @media = qx(ls Media);
 
 my $config = {
-    INCLUDE_PATH => 'Template'
+    INCLUDE_PATH => 'template'
 };
 
 my $template = Template->new($config);
