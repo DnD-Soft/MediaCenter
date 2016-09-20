@@ -11,6 +11,4 @@ my $q = new CGI;
 
 my $filename = $q->param('fileName');
 
-say $q->param('fileName');
-
-system("sudo mplayer Media/$filename > /dev/null 2>&1 &");
+system("sudo mplayer Media/$filename < pipes/player  > /dev/null 2>&1 &");
