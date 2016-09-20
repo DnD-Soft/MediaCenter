@@ -5,7 +5,7 @@ body{margin:0; padding:0;}
 h1{}
 h2{}
 h3{}
-
+ul{margin:0; padding:0; list-style:none;}
 .clear{width:100%; height:0px; clear:both;}
 
 .player-div{width:100%; height:260px; background-color:#331100;}
@@ -29,3 +29,8 @@ h3{}
 	.playerRight{width:260px; height:100%;  background-color:#1a0900; float:right;}
 		.playerImg{width:100%; height:260px;}
 
+.content{font-size:large; font-family:monospace; width:80%; margin:5px auto;}
+	.content >  ul{margin:3px 1px;}
+		.content > ul .pjesma-li{padding:5px; background-color:#ccc; border-radius:5%; border-width:2px; border-style:solid; border-color:#023;}
+			.content .pjesma{}
+			.content .pjesma.pusteno{color:red;} 
