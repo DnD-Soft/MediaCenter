@@ -32,5 +32,5 @@ ul{margin:0; padding:0; list-style:none;}
 .content{font-size:large; font-family:monospace; width:80%; margin:5px auto;}
 	.content >  ul{margin:3px 1px;}
 		.content > ul .pjesma-li{padding:5px; background-color:#ccc; border-radius:5%; border-width:2px; border-style:solid; border-color:#023;}
-			.content .pjesma{}
-			.content .pjesma.pusteno{color:red;} 
+			.content .pjesma{text-decoration:underline;}
+			.content .pjesma.pusteno{color:red; text-decoration:line-through;} 
