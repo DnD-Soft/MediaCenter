@@ -4,6 +4,7 @@ use 5.010;
 use strict;
 use warnings;
 use CGI;
+use Switch;
 
 print("Content-type: text/html\n\n");
 
@@ -16,10 +17,10 @@ say $filename;
 #some error
 switch($action){
 	case "play" {
-		system("sudo mplayer Media/$fileName > pipes/player > /dev/null 2>&1 &");
+		system("sudo mplayer Media/$filename <  pipes/player > /dev/null 2>&1 &");
 	}
 	case "stopPlay" {
-		system("sudo kill mplayer");
+		system("sudo pkill mplayer");
 	}
 	else {}
 }
