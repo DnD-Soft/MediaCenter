@@ -8,7 +8,18 @@ use CGI;
 print("Content-type: text/html\n\n");
 
 my $q = new CGI;
+#better way needed
+my $filename = $q->param("fileName");
+my $action = $q->param("action");
 
-my $filename = $q->param('fileName');
-
-system("sudo mplayer Media/$filename < pipes/player  > /dev/null 2>&1 &");
+say $filename;
+#some error
+switch($action){
+	case "play" {
+		system("sudo mplayer Media/$fileName > pipes/player > /dev/null 2>&1 &");
+	}
+	case "stopPlay" {
+		system("sudo kill mplayer");
+	}
+	else {}
+}

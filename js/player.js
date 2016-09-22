@@ -1,10 +1,24 @@
 $(document).ready(function(){
-	var pusti=function pustiF(){
-		var data;
-		$.post( "player.pl",{fileName:"pjesma3_1.mp3"}, function(data){
-  			alert(data);
+	//when fiddling with player
+	var player=0;
+	//when choosing file from content
+	var playerContent=function playerContent(){
+		var returnData,data={fileName,action};
+		//play from begining
+		if($(this).hasClass("playes")){
+			data.fileName=$(this).attr("fileId").trim();
+			data.action="play";
+		}
+		//stop previous and play this (pl script should  know to do this)
+		else if($(this).hasClass("stoped")){
+			data.fileName=$(this).attr("fileId").trim();
+			data.action="stopPlay";
+		}
+
+		//send message
+		$.post("player.pl",data,function(retData){
+			alert(retData);
 		});
-		$(this).addClass("pusteno");
 	}
-	$(".content > ul > li > a").click(pusti);
+	$(".content > ul > li > a").click(playerContent);
 });
