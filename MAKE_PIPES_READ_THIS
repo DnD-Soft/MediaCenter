@@ -1,0 +1,7 @@
+mkdir pipes
+cd pipes
+mkfifo player
+exec 3<> player
+chmod 777 player
+
+MORA RUCNO JEBEM TI KRU
