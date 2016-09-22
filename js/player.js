@@ -3,7 +3,7 @@ $(document).ready(function(){
 	var player=0;
 	//when choosing file from content
 	var playerContent=function playerContent(){
-		var returnData,data={fileName,action};
+		var returnData,data={fileName:"",action:""};
 		//play from begining
 		if($(this).hasClass("playes")){
 			data.fileName=$(this).attr("fileId").trim();
