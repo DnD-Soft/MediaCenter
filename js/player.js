@@ -3,17 +3,17 @@ $(document).ready(function(){
 	var player=0;
 	//when choosing file from content
 	var playerContent=function playerContent(){
-		var returnData,data={fileName:"",action:""};
+		var returnData,data={fileName:""};
 		//play from begining
-		if($(this).hasClass("playes")){
+		if($(this).hasClass("pjesma")){
 			data.fileName=$(this).attr("fileId").trim();
-			data.action="play";
+			//data.action="play";
 		}
 		//stop previous and play this (pl script should  know to do this)
-		else if($(this).hasClass("stoped")){
+		/*else if($(this).hasClass("stoped")){
 			data.fileName=$(this).attr("fileId").trim();
 			data.action="stopPlay";
-		}
+		}*/
 
 		//send message
 		$.post("player.pl",data,function(retData){

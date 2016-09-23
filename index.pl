@@ -6,7 +6,7 @@ use Template;
 
 print("Content-type: text/html\n\n");
 
-my @media = qx(ls Media);
+my @media = qx(ls media);
 
 my $config = {
     INCLUDE_PATH => 'template'
