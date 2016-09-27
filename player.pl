@@ -26,4 +26,6 @@ say $filename;
 #	else {}
 #}
 
-system("sudo mplayer media/$filename < pipes/player > /dev/null 2>&1 &");
+system("sudo mplayer -slave media/$filename < pipes/player > /dev/null 2>&1 &");
+
+print("test");

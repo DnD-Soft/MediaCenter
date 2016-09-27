@@ -7,8 +7,9 @@ use CGI;
 print("Content-type: text/html\n\n");
 
 my $q = new CGI;
-my $cmd = $q->param('command');
+my $cmd = $q->param('command') ;
 
 open(my $fh, '>', 'pipes/player');
 print($fh $cmd);
+print($fh "\n");
 close($fh);
